@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:quran/quran_model.dart';
-import 'package:quran/video/video_player_screen.dart';
-import 'package:quran/youtube_player_demo.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:quran/quran/quran_page.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-// import 'package:quran/youtube_player_demo.dart';
 
 void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: VideoPlayers(),
+    home: QuranPage(),
   ));
 }
 class OpenYoutubeScreen extends StatelessWidget {

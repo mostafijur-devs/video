@@ -75,6 +75,8 @@ class _VideoPlayerState extends State<VideoPlayers> {
       appBar: AppBar(title: Text('Video Player')),
       body: _controller.value.isInitialized
           ? Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+
             children: [
               Center(
                   child: Stack(
@@ -125,29 +127,34 @@ class _VideoPlayerState extends State<VideoPlayers> {
                                 });
                               },
                             ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      getBackward();
+                                    },
+                                    // child:Icon(Icons.delivery_dining),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      getFroward();
+                                    },
+                                    // child: Container(color: Colors.red,),
+                                  ),
+                                ),
+                              ],
+                            ),
+
                           ],
                         ),
                       ),
                     ],
                   ),
                 ),
-              Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      getBackward();
-                    },
-                    child:Icon(Icons.delivery_dining),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      getFroward();
-                    },
-                    child: Container(color: Colors.red,),
-                  ),
-                ],
-              ),
-              
+
             ],
 
           )
